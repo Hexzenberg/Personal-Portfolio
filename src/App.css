@@ -1,0 +1,403 @@
+/* ---------------------------------------------------Fonts--------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ---------------------------------------------------Default CSS--------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+
+  .intro,
+  .skills,
+  .projects,
+  .header {
+    padding: 20px 10px;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------Header CSS--------------------------------------------------- */
+
+.header {
+  width: 100%;
+  background-color: #c8e2fd;
+  background-image: linear-gradient(to right, rgba(133, 177, 221, 0), #619fe1, #5892de);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 1%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  column-gap: 60%;
+}
+
+.header_links {
+  display: flex;
+  flex: column;
+}
+
+.header a {
+  color: #f9dcdc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
+  color: #333333;
+}
+
+.font_change {
+  font-family: "Roboto", sans-serif;
+  font-size: x-large;
+  font-style: italic;
+  margin: 0 10px;
+}
+
+.font_change_2 {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  font-style: italic;
+  color: #f9f9f9;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.header h5 {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.header h5:hover {
+  color: #f69595;
+}
+
+.margin_10 {
+  margin-right: 5%;
+}
+
+.margin_60 {
+  margin-left: 60%;
+}
+
+.margin_1 {
+  margin-left: 1%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header h5 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-align: center;
+  }
+
+  .header h5:hover {
+    color: #f69595;
+  }
+
+  .font_change,
+  .font_change_2,
+  .header h5 {
+    font-size: calc(1.5vw + 1.5vh);
+  }
+}
+
+/* ---------------------------------------------------Intro CSS--------------------------------------------------- */
+
+.intro {
+  margin-top: 0;
+  width: 100%;
+  min-height: 400px;
+  background: #e4f0fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2% 2%;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 5px solid #fcc5c5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.intro p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.intro ul {
+  list-style: none;
+  padding: 0;
+}
+
+.intro li {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+/* ---------------------------------------------------Skills CSS--------------------------------------------------- */
+
+.skills {
+  width: 100%;
+  padding: 40px 20px;
+  background: #f8fef7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  background: #f49191;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .skill-card {
+    padding: 10px;
+  }
+}
+
+/* ---------------------------------------------------Projects CSS--------------------------------------------------- */
+
+.projects {
+  width: 100%;
+  padding: 40px 20px;
+  background: #faf3ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.proj {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5%;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.proj a {
+  color: #5b80fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.proj a:hover {
+  color: #3c70a9;
+}
+
+.project-card {
+  background: #ffcdacb9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #5b80fa;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .proj {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .proj a {
+    color: #5b80fa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .proj a:hover {
+    color: #3c70a9;
+  }
+
+  .project-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+  }
+
+  .project-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #5b80fa;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+
+/* ---------------------------------------------------Footer CSS--------------------------------------------------- */
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: #966666;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #deff92;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
