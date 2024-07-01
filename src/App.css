@@ -281,6 +281,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: 5%;
+  width: 100%;
   text-align: left;
   flex-wrap: wrap;
 }
